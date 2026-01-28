@@ -1,0 +1,12 @@
+---
+description: Prefer simple over clever - avoid over-abstraction and premature optimization
+alwaysApply: true
+---
+
+# Keep It Simple
+
+- Prefer simple over clever
+- Use the simplest solution that works
+- Avoid over-abstraction and premature optimization
+- Flatten unnecessary indirection
+- If a function suffices, don't create a class

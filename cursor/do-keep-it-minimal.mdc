@@ -1,0 +1,12 @@
+---
+description: Remove unnecessary content - concise responses, no verbose explanations
+alwaysApply: true
+---
+
+# Keep It Minimal
+
+- Skip verbose explanations unless requested
+- Remove code/text that adds no value
+- No placeholder comments or empty stubs
+- Delete dead code, don't comment it out
+- Every line should earn its place

@@ -1,0 +1,12 @@
+---
+description: Be explicit, unambiguous, and direct - clarity over cleverness
+alwaysApply: true
+---
+
+# Keep It Clear
+
+- Be direct and explicit
+- Name things for what they do, not how
+- One idea per sentence, one action per step
+- Make intent obvious from code/text alone
+- If it needs a comment to explain, consider rewriting

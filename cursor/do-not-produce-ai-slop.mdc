@@ -1,0 +1,35 @@
+---
+description: Ban AI slop patterns - filler phrases, hyperbolic adjectives, and generic LLM output
+alwaysApply: true
+---
+
+# Avoid AI Slop
+
+AI slop = low-effort LLM output optimized for length, not value. Ban these patterns:
+
+## Banned Phrases
+
+| Category | Banned Examples |
+|----------|-----------------|
+| Openers | "Great question!", "I'd be happy to", "Let me explain", "In today's fast-paced world" |
+| Adjectives | "robust", "seamless", "comprehensive", "cutting-edge", "game-changer", "revolutionary" |
+| Verbs | "delve", "elevate", "unlock", "supercharge", "leverage" |
+| Structures | "It's not about X, it's about Y", "No X. No Y. Just Z." |
+
+## Examples
+
+| Context | ❌ **BAD** | ✅ **GOOD** |
+|---------|-----------|-------------|
+| Chat | "That's a great question! I'd be happy to help..." | "Add `import os` at line 1." |
+| Docs | "This robust API provides comprehensive solutions..." | "Auth API. Returns JWT on success, 401 on failure." |
+| Comment | `# Iterates through elements applying transformations` | `# Normalize timestamps to UTC` |
+| Commit | `feat: Implement comprehensive authentication system` | `feat(auth): add JWT login endpoint` |
+| Analysis | "After comprehensive analysis, we identified areas..." | "Bottleneck: DB queries avg 2.3s. Index reduces to 50ms." |
+
+## Anti-Patterns
+
+- Restating the user's question back
+- Context before answer (use BLUF)
+- Unnecessary caveats and hedging
+- Triple-threat syndrome (always grouping in threes)
+- Hyphenated buzzwords: "future-ready", "hyper-connected"
