@@ -1,0 +1,63 @@
+---
+description: Technical writing style for docs, design docs, RFCs, ADRs, READMEs
+globs: "**/*.md"
+alwaysApply: false
+---
+
+# Technical Writing Style
+
+Maximize reader utility per word. Keep only decision-relevant, non-obvious information.
+
+## Structure
+
+- **TL;DR first**: 3–6 bullets with conclusion/recommendation/result
+- **Inverted pyramid**: Lead with decision, details later
+- **Show the delta**: What changes, what stays, why now, acceptance criteria
+
+## Language Rules
+
+- Short sentences; one idea per sentence
+- Active voice with explicit actors ("Service A writes...")
+- Quantify: latency, cost, memory, accuracy, bounds
+- Replace paragraphs with bullets or tables
+- One name per concept; define terms once
+
+## Normative Keywords (BCP 14)
+
+UPPERCASE carries normative meaning: MUST, MUST NOT, SHOULD, SHOULD NOT, MAY.
+
+## Precision Vocabulary
+
+**Prefer:** constraint, assumption, invariant, requirement, acceptance criterion, non-goal, trade-off, risk, failure mode, interface, contract, baseline, delta, metric, threshold
+
+## Document Templates
+
+| Type | Key Sections |
+|------|--------------|
+| Decision Doc | TL;DR, Problem, Constraints, Proposal, Alternatives, Risks, Acceptance criteria |
+| Research Report | TL;DR, Setup, Method, Results, Caveats, Next experiments |
+| Spec/RFC | Abstract, Goals/Non-goals, Requirements, Interfaces, Errors, Test plan |
+| README | What it is, Quickstart, API examples, Config, Links |
+
+## Diátaxis Categories
+
+Don't mix in one section:
+- **Tutorial**: Learning path
+- **How-to**: Task completion steps
+- **Reference**: Precise facts/interfaces
+- **Explanation**: Concepts/why
+
+## Examples
+
+| Context | ❌ **BAD** | ✅ **GOOD** |
+|---------|-----------|-------------|
+| TL;DR | "This document describes the new caching system." | "Add Redis cache to reduce DB load by 80%. Ship by Q2." |
+| Requirement | "The system should be fast." | "P99 latency MUST be <100ms under 1000 RPS." |
+| Risk | "There might be issues." | "Risk: Cache invalidation race. Mitigation: TTL + version key." |
+
+## Pre-Ship Checklist
+
+- [ ] TL;DR exists and matches body
+- [ ] Every section answers: "What decision/action does this enable?"
+- [ ] Requirements are testable (objective pass/fail)
+- [ ] Assumptions explicit; unknowns tracked
